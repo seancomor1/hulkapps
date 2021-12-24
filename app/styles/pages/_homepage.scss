@@ -1,0 +1,321 @@
+.section-hero {
+    margin: 80px 0 20px 0;
+    border-radius: 14px;
+    position: relative;
+    @include mq(desktop) {
+        margin: 74px 25px 0 25px;
+    }
+    img {
+        margin-bottom: 20px;
+        padding: 0 15px;
+        @include mq(tablet) {
+            margin-bottom: 0;
+            padding: 0;
+        }
+    }
+}
+.section-product-description {
+    margin-bottom: 20px;
+    @include mq(tablet) {
+        margin-bottom: 50px;
+    }
+    .product-desc-img {
+        margin-bottom: 20px;
+        @include mq(tablet) {
+            min-height: 700px;
+            object-fit: cover;
+        }
+    }
+}
+.section-carousel {
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 50px;
+    @include mq(phablet) {
+        padding: 0;
+    }
+    @include mq(desktop) {
+        margin-bottom: 120px;
+    }
+    .item {
+        position: relative;
+        overflow: hidden;
+        height: 415px;
+        border-radius: 14px;
+        height: 250px;
+        @include mq(desktop) {
+            height: 305px;
+        }
+        @include mq(desktop-xl) {
+            height: 415px;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s;
+        }
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+            h6 {
+                display: block;
+            }
+        }
+        h6 {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            color: white;
+            font-size: 22px;
+            transition: transform .5s;
+        }
+    }
+    .owl-overlay {
+        min-width: 250px;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.section-ready {
+    padding: 30px 0 0 0;
+    .section-ready-text {
+        position: relative;
+        top: -50px;
+    }
+    .section-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        @include mq(desktop) {
+            padding: 0 50px;
+            flex-direction: row;
+        }
+        @include mq(desktop-xl) {
+            padding: 0 70px;
+        }
+    }
+    .product-wrap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include mq(desktop) {
+            flex-direction: row;
+        }
+    }
+}
+.section-refil-packages {
+    padding: 100px 0 80px 0;
+    margin-bottom: 40px;
+    @include mq(desktop) {
+        margin-bottom: 90px;
+        padding: 180px 0 140px 0;
+    }
+    .container {
+        position: relative;
+        .refil {
+            margin-bottom: 30px;
+            @include mq(desktop) {
+                margin-bottom: 0;
+                position: absolute;
+                top: -100px;
+                left: 0;
+                max-width: 600px;
+            }
+            @include mq(desktop-xl) {
+                max-width: 100%;
+            }
+            @include mq(desktop-xxxl) {
+                width: 800px;
+            }
+        }
+        @include mq(desktop-xxl) {
+            max-width: 1250px;
+        }
+        @include mq(desktop-xxxl) {
+            max-width: 1550px;
+        }
+        @include mq(desktop-xxxxl) {
+            max-width: 1700px;
+        }
+    }
+    .centered {
+        @include mq(desktop) {
+            position: relative;
+            top: 100px;
+        }
+    }
+    .product-description {
+        color: #002D33;
+    }
+    .product-icon-text {
+        @include mq(desktop) {
+            padding-left: 50px;
+        }
+    }
+    .button {
+        @include mq(desktop) {
+            position: relative;
+            right: -50px;
+        }
+    }
+    .green-bckg {
+        @include mq(desktop) {
+            z-index: -1;
+            background-color: #DAE5E5;
+            border-radius: 12px;
+            width: 1000px;
+            height: 606px;
+            position: absolute;
+            top: -90px;
+            right: 100px;
+        }
+    }
+}
+.section-video {
+    padding: 0 15px 0 15px;
+    @include mq(desktop) {
+        padding: 0 25px 0 25px;
+        margin-top: 200px;
+    }
+    .video-wrap {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        height: 475px;
+        @include mq(desktop) {
+            height: 675px;
+        }
+    }
+    .video-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 74, 76, 0.35);
+    }
+    .video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .video-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        margin: 0 auto;
+        @include mq(desktop) {
+            width: 100%;
+        }
+    }
+}
+.section-instagram-carousel {
+    padding: 80px 0;
+    .owl-three {
+        .item {
+            display: flex;
+            &.second {
+                margin-top: 20px;
+            }
+        }
+    }
+    .link-wrap {
+        margin-top: 40px;
+    }
+    .ready-link {
+        border-color: #002D33;
+        color: #002D33;
+        .icon {
+            fill: #002D33;
+        }
+    }
+}
+.section-news-letter {
+    @include mq(desktop-xl) {
+        padding: 0 70px;
+        margin-bottom: -150px;
+    }
+    .news-letter-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #F2F2F2;
+        padding: 30px 15px;
+        @include mq(desktop) {
+            border-radius: 14px;
+            
+        }
+        @include mq(desktop-xl) {
+            padding: 0 20px 0 0;
+        }
+        @include mq(desktop-xxxl) {
+            padding-left: 100px;
+        }
+    }
+    .newsletter-title {
+        font-size: 30px;
+        line-height: 38px;
+        margin-bottom: 10px;
+        color: black;
+        max-width: 325px;
+    }
+    .newsletter-paragraph {
+        font-size: 16px;
+        line-height: 26px;
+        color: black;
+        max-width: 414px;
+        font-weight: normal;
+    }
+    form {
+        position: relative;
+        .form-control {
+            border: none;
+            background-color: white;
+            padding-left: 15px;
+            font-size: 16px;
+            color: black;
+            height: 52px;
+            &::placeholder {
+                color: black;
+            }
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 7px;
+            width: 44px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #004A4C;
+            border-radius: 6px;
+            border: none;
+            .icon {
+                width: 20px;
+                height: 20px;
+                fill: white;
+            }
+        }
+    }
+}

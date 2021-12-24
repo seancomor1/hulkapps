@@ -1,0 +1,28 @@
+// colors
+$light: rgba(255,255,255,1);
+$dark: rgba(0,0,0,1);
+$purple: rgba(136,93,248,1);
+$green: rgba(76,201,158,1);
+$pink: rgba(251,24,148,1);
+
+
+$base: 100%;
+
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  color: #000;
+  font-family: 'Brandon Grotesque';
+  margin: 0;  
+  font-size: 14px;
+  font-weight: bold;
+}
+body {
+  position: relative;
+}
+a {
+  &:hover {
+      text-decoration: none;
+  }
+}

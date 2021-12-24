@@ -1,0 +1,94 @@
+header {
+    //filter: blur(1.5rem);
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    @include mq(desktop) {
+        padding: 23px 50px;
+    }
+    .navbar-collapse {
+        position: relative;
+        justify-content: space-between;
+    }
+    .nav-item {
+        display: flex;
+        align-items: center;
+        @include mq(desktop) {
+            padding: 0 20px;
+            &:first-of-type {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            line-height: 22px;
+            text-transform: uppercase;
+            color: black;
+            letter-spacing: 1.5px;
+            padding: 0 !important;
+            .icon-wrap {
+                position: relative;
+                .item-num {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    right: -8px;
+                    top: -2px;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    border: 1px solid white;
+                    background-color: #DDA74A;
+                    color: white;
+                    font-size: 10px;
+                    font-weight: 300;
+                    span {
+                        position: relative;
+                        right: -1px;
+                    }
+                }
+            }
+            .icon  {
+                width: 26px;
+                height: 26px;
+                margin-left: 12px;
+            }
+        }
+    }
+    .navbar-brand {
+        padding: 0;
+        margin: 0;
+        @include mq(desktop) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .navbar-toggler {
+        padding: 0;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+        .hamburger {
+            padding: 0;
+            .hamburger-box {
+                width: 30px;
+            }
+        }
+        .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+            width: 30px;
+            height: 2px;
+        }
+    }
+}

@@ -1,0 +1,317 @@
+.hidden {
+    display: none;
+}
+section {
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Chronicle Display';
+}
+.section-text-wrap {
+    @include mq(tablet) {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .container {
+        @include mq(desktop-xxl) {
+            max-width: 1250px;
+        }
+        @include mq(desktop-xxxl) {
+            max-width: 1550px;
+        }
+        @include mq(desktop-xxxxl) {
+            max-width: 1700px;
+        }
+    }
+}
+.hero-title {
+    font-size: 46px;
+    line-height: 52px;
+    color: #004a4c;
+    max-width: 237px;
+    margin-bottom: 15px;
+    @include mq(tablet) {
+        font-size: 56px;
+        line-height: 62px;
+        color: white;
+    }
+}
+.hero-description {
+    font-size: 16px;
+    line-height: 24px;
+    color: #004a4c;
+    font-weight: normal;
+    max-width: 407px;
+    margin-bottom: 25px;
+    @include mq(tablet) {
+        font-size: 20px;
+        line-height: 28px;
+        color: white;
+    }
+}
+.button {
+    display: inline-block;
+    border-radius: 6px;
+    font-size: 13px;
+    letter-spacing: 1.95px;
+    padding: 15.5px 39px;
+    text-transform: uppercase;
+    &-white {
+        background-color: white;
+        color: #004A4C;
+    }
+    &-green {
+        background-color: #004A4C;
+        color: #FFFAFA;
+    }
+}
+.product-name {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2.1px;
+    font-weight: 100;
+    color: #002D33;
+}
+.product-desc-title {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #002D33;
+}
+.product-description {
+    font-size: 18px;
+    line-height: 28px;
+    color: #002D33;
+    margin-bottom: 40px;
+    font-weight: 300;
+    max-width: 565px;
+    @include mq(tablet) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+.product-icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    &:last-of-type {
+        margin-bottom: 45px;
+    }
+    img {
+        margin-right: 20px;
+    }
+    .product-text {
+        font-size: 18px;
+        line-height: 28px;
+        color: #002D33;
+        margin-bottom: 0;
+        font-weight: 300;
+        @include mq(tablet) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
+.carousel-above-title {
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: 2.4px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+}
+.carousel-title {
+    font-size: 50px;
+    line-height: 54px;
+    color: white;
+    letter-spacing: -0.78px;
+    text-align: center;
+    max-width: 350px;
+    @include mq(tablet) {
+        font-size: 78px;
+        line-height: 82px;
+    }
+}
+.ready-title {
+    font-size: 36px;
+    line-height: 44px;
+    color: black;
+    max-width: 300px;
+    margin-bottom: 35px;
+}
+.ready-link {
+    border: 1px solid #002D33;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 300px;
+    height: 50px;
+    color: #002D33;
+    &:hover {
+        color: #002D33;
+    }
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        border-left: 1px solid #002D33;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+.product-title {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+.product-desc {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: black;
+}
+.product-box {
+    position: relative;
+    margin-bottom: 30px;
+    @include mq(desktop) {
+        margin-bottom: 0;
+    }
+    &:hover {
+        @include mq(desktop) {
+            .pro-text {
+                display: block;
+            }
+            img {
+                right: -80px;
+                @include mq(desktop-xl) {
+                    right: -50px;
+                }
+            }
+        }
+    }
+    .pro-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform .2s;
+        align-items: center;
+        @include mq(desktop) {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+        }
+    }
+    img {
+        position: relative;
+        z-index: 1000;
+        transition: transform .2s;
+        margin-bottom: 15px;
+        @include mq(desktop) {
+            margin-bottom: 0;
+        }
+    }
+}
+.section-people-review {
+    padding: 90px 0 55px 0;
+    background-color: #F2F2F2;
+    .owl-dots {
+        margin-top: 50px !important;
+        .owl-dot {
+            &.active {
+                span {
+                    background-color: #004a4c;
+                }
+            }
+            &:focus {
+                border: none;
+                outline: none;
+            }
+            span {
+                border: 1px solid #004a4c;
+                background-color: transparent;
+            }
+        }
+    }
+}
+.people-review-subtitle {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2.1px;
+    line-height: 1;
+    color: black;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.people-review-text {
+    font-family: 'Chronicle Display';
+    color: black;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 28px;
+    @include mq(desktop) {
+        max-width: 747px;
+        margin: 0 auto;
+        font-size: 25px;
+        line-height: 42px;
+    }
+}
+.people-review-name {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: #002D33;   
+    font-weight: normal;
+    margin-top: 20px;
+}
+.video-subtitle {
+    font-size: 14px;
+    letter-spacing: 2.1px;
+    color: #FFFAFA;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+}
+.video-title {
+    font-size: 36px;
+    text-align: center;
+    color: #FFFAFA;
+    line-height: 1;
+}
+.video-paragraph {
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFAFA;
+    font-weight: normal;
+    max-width: 636px;
+}
+.hashtag {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin-bottom: 50px;
+    &::first-letter {
+        font-weight: normal;
+    }
+    a {
+        color: black;
+    }
+}
